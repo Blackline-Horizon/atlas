@@ -5,7 +5,7 @@ import * as path from 'path';
 
 // Load environment variables based on the environment
 // have to set this on EC2 console like: export NODE_ENV=production
-if (process.env.NODE_ENV === 'production') {
+if (process.env.BLACKLINE_HORIZON_ENV === 'production') {
   dotenv.config({ path: path.join(__dirname, '../config/.env.prod') });
 } else {
   dotenv.config({ path: path.join(__dirname, '../config/.env.local') });
